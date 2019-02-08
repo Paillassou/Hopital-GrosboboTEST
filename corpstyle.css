@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  background-image: url(https://cdn.hipwallpaper.com/i/64/1/1AOc5C.png);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-size: 1.6em;
+  display: none;
+  font-family: 'Arvo', serif;
+  font-style: italic;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.auto {
+  margin: auto;
+  height: 800px;
+}
+
+.picture {
+  background-image: url("corps.png");
+  position: relative;
+  /* Empêche le background de s'afficher plusieurs fois pour occuper tout l'espace */
+  background-repeat: no-repeat;
+  min-height: 540px;
+  min-width: 10em;
+  height: 540px;
+  width: 10em;
+  display: flex;
+}
+
+button {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  /*Transition progressive vers bouton plus gros*/
+  transition: background-color .25s ease-out, transform .5s ease-out;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgba(220, 20, 60, 0.7);
+  transform: scale(1.3333);
+}
+
+/*classe pour switcher les boutons actif et non actifs*/
+.redbutton{
+  background-color: rgba(220, 20, 60, 0.7);
+}
+
+/* Boutons cliquables pour afficher le texte, position absolute pour qu'ils restent en place sur l'image peu importe les mouvements de la fenêtre */
+
+#buttonshoulder {
+  position: absolute;
+  margin-top: 6.5em;
+  margin-left: 0em;
+  user-select: none;
+}
+
+#buttonelbow {
+  position: absolute;
+  margin-top: 14em;
+  margin-left: 8em;
+}
+
+#buttonhip {
+  position: absolute;
+  margin-top: 18.1em;
+  margin-left: 6.5em;
+}
+
+#buttonwrist {
+  position: absolute;
+  margin-top: 17em;
+  margin-left: -0.5em;
+}
+
+#buttonknee {
+  position: absolute;
+  margin-top: 26em;
+  margin-left: 2.1em;
+}
+
+#buttonankle {
+  position: absolute;
+  margin-top: 32.4em;
+  margin-left: 5.3em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: 130px;
+}
+
+.auto header {
+  text-align: center;
+  font-family: 'Arvo', serif;
+  font-size: 3em;
+  margin-top: 0.7em;
+  margin-bottom: 1em;
+}
+
+.text {
+  width: 12em;
+  font-family: 'Arvo', serif;
+  font-size: 0.98em;
+  font-weight: bold;
+}
+
+p {
+  display: none;
+}
+
+.title {
+  font-size: 1.8em;
+  text-decoration: underline;
+}
+
+/* Affichage pour écran supérieur à mobile */
+
+@media screen and (min-width: 768px) {
+  #pagetitle {
+    font-size: 4em;
+  }
+
+  .auto header {
+    text-align: center;
+    font-family: 'Arvo', serif;
+    font-size: 3em;
+    margin-top: 0.3em;
+    margin-bottom: 0.7em;
+  }
+
+  .text {
+    width: 12em;
+    font-family: 'Arvo', serif;
+    font-size: 0.98em;
+    font-weight: bold;
+  }
+
+  p {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .auto {
+    margin: auto;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .picture {
+    background-image: url("corps.png");
+    position: relative;
+    background-repeat: no-repeat;
+    width: 10em;
+    display: flex;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    margin-left: 40px;
+  }
+
+  footer {
+    display: block;
+  }
+}
